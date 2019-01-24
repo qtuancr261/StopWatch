@@ -4,4 +4,11 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        main.cpp \
+    StopWatch.cpp
+
+HEADERS += \
+    StopWatch.h
+
+LIBS += -L/usr/lib/x86_64-linux-gnu/ -lboost_chrono \
+         -lboost_system
