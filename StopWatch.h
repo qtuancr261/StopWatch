@@ -31,7 +31,7 @@ public:
    uint64_t ElapsedSec() const;
 
    std::chrono::steady_clock::time_point Restart();
-
+   boost::chrono::steady_clock::time_point B_Restart();
 private:
    clock::time_point mStart;
 };
