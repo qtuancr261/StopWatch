@@ -7,7 +7,8 @@
  */
 
 
-#pragma once
+#ifndef H_STOPWATCH_H
+#define H_STOPWATCH_H
 #include <chrono>
 
 
@@ -32,3 +33,4 @@ private:
    clock::time_point mStart;
 };
 
+#endif // H_STOPWATCH_H
