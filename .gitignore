@@ -74,3 +74,8 @@ Thumbs.db
 # VSCode Editor
 .vscode/
 .vscode/*
+
+# Qt creator bin
+.pro.user*
+bin*
+build*
