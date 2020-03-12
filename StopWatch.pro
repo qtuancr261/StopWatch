@@ -10,5 +10,6 @@ SOURCES += \
 HEADERS += \
     StopWatch.h
 
-LIBS += -L/usr/lib/x86_64-linux-gnu/ -lboost_chrono \
-         -lboost_system
+# For boost::chrono version
+#LIBS += -L/usr/lib/x86_64-linux-gnu/ -lboost_chrono \
+#         -lboost_system

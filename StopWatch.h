@@ -1,39 +1,39 @@
-/* 
+/*
  * File:   StopWatch.h
  * Author: KjellKod
  * From: https://github.com/KjellKod/StopWatch
- * 
- * Created on 2014-02-07 
+ *
+ * Created on 2014-02-07
  */
 
 #ifndef H_STOPWATCH_H
 #define H_STOPWATCH_H
-#include <boost/chrono.hpp>
 #include <chrono>
 class StopWatch {
 public:
-    typedef std::chrono::steady_clock clock;
-    typedef std::chrono::microseconds microseconds;
-    typedef std::chrono::milliseconds milliseconds;
-    typedef std::chrono::seconds seconds;
-    typedef boost::chrono::steady_clock b_clock;
-    typedef boost::chrono::microseconds b_microseconds;
-    typedef boost::chrono::milliseconds b_milliseconds;
-    typedef boost::chrono::seconds b_seconds;
+    // Alias
+    using clock = std::chrono::steady_clock;
+    // steady_clock encapsulates a clock suitable for recording time intervals, this clock always increases
+    using microseconds = std::chrono::microseconds;
+    using milliseconds = std::chrono::milliseconds;
+    using seconds = std::chrono::seconds;
+    using nanoseconds = std::chrono::nanoseconds;
 
     StopWatch();
     StopWatch(const StopWatch&);
     StopWatch& operator=(const StopWatch& rhs);
 
-    uint64_t ElapsedUs() const;
-    uint64_t ElapsedMs() const;
-    uint64_t ElapsedSec() const;
+public:
+    uint64_t elapsedMicroSec() const;
+    uint64_t elapsedMilliSec() const;
+    uint64_t elapsedSec() const;
+    uint16_t elapsedNanoSec() const;
 
-    //std::chrono::steady_clock::time_point Restart();
-    boost::chrono::steady_clock::time_point B_Restart();
+    std::chrono::steady_clock::time_point restart();
 
 private:
-    b_clock::time_point mStart;
+    clock::time_point _mStart;
+    // time_point represent an instant in time for the clock
 };
 
-#endif // H_STOPWATCH_H
+#endif  // H_STOPWATCH_H
