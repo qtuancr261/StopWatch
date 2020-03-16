@@ -1,9 +1,7 @@
 /* 
  * File:   StopWatch.cpp
- * Author: KjellKod
- * From: https://github.com/KjellKod/StopWatch
- * 
- * Created on 2014-02-07 
+ * Author: tuantq3
+ * Created on 2020-03-16
  */
 
 #include "StopWatch.h"
@@ -47,12 +45,6 @@ uint64_t StopWatch::ElapsedSec() const
  * Resets the start point
  * @return the updated start point
  */
-//std::chrono::steady_clock::time_point StopWatch::Restart()
-//{
-//    mStart = b_clock::now();
-//    return mStart;
-//}
-
 boost::chrono::steady_clock::time_point StopWatch::B_Restart()
 {
     mStart = b_clock::now();

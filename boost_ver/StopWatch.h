@@ -1,21 +1,15 @@
 /* 
  * File:   StopWatch.h
- * Author: KjellKod
- * From: https://github.com/KjellKod/StopWatch
+ * Author: tuantq3
  * 
- * Created on 2014-02-07 
+ * Created on 2020-03-16
  */
 
 #ifndef H_STOPWATCH_H
 #define H_STOPWATCH_H
 #include <boost/chrono.hpp>
-#include <chrono>
 class StopWatch {
 public:
-    typedef std::chrono::steady_clock clock;
-    typedef std::chrono::microseconds microseconds;
-    typedef std::chrono::milliseconds milliseconds;
-    typedef std::chrono::seconds seconds;
     typedef boost::chrono::steady_clock b_clock;
     typedef boost::chrono::microseconds b_microseconds;
     typedef boost::chrono::milliseconds b_milliseconds;
@@ -29,7 +23,6 @@ public:
     uint64_t ElapsedMs() const;
     uint64_t ElapsedSec() const;
 
-    //std::chrono::steady_clock::time_point Restart();
     boost::chrono::steady_clock::time_point B_Restart();
 
 private:
