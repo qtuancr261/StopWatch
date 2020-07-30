@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   CPUClock.h
  * Author: tuantq3
@@ -14,7 +8,6 @@
 #ifndef CPUCLOCK_H
 #define CPUCLOCK_H
 
-#include "boost/chrono.hpp"
 #include "Poco/Timestamp.h"
 #include "Poco/DateTime.h"
 class CpuClock {

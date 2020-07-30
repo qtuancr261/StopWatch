@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     StopWatch benWat;
-    benWat.Restart();
+    benWat.restart();
     for (int var = 1; var < 100000; ++var) {
         cout << "B" << endl;
     }
